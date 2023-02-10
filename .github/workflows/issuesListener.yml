@@ -1,0 +1,9 @@
+name: Output information
+on: issues
+
+jobs:
+  Output-github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output GHA context
+        run: echo "${{ toJSON(github) }}"
